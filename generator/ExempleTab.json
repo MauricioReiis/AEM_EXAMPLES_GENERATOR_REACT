@@ -1,0 +1,91 @@
+{
+  "project-settings": {
+    "code-owner": "React App",
+    "bundle-path": "../core/src/main/java",
+    "test-path": "../core/src/test/java",
+    "apps-path": "../ui.apps/src/main/content/jcr_root/apps",
+    "component-path": "reactapp",
+    "model-interface-pkg": "com.reactapp.core.models",
+    "model-impl-pkg": "com.reactapp.core.models.impl"
+  },
+  "name": "tabs-exemple",
+  "title": "Exemple Multifields Tabs",
+  "group": "React App - Content",
+  "type": "components",
+  "options": {
+    "js": false,
+    "jstxt": false,
+    "css": false,
+    "csstxt": false,
+    "html": false,
+    "html-content": false,
+    "slingmodel": true,
+    "testclass": false,
+    "junit-major-version": 5,
+    "content-exporter": true,
+    "model-adaptables": ["request"],
+    "generic-javadoc": false,
+    "properties-tabs": [
+      {
+        "id": "tab-1",
+        "label": "Multifield Banner",
+        "fields": ["exempleOne"]
+      },
+      {
+        "id": "tab-2",
+        "label": "Multifield Título",
+        "fields": ["exempleTwo"]
+      }
+    ],
+    "properties": [
+      {
+        "field": "exempleOne",
+        "type": "multifield",
+        "label": "First Multifield",
+        "model-name": "multifieldOneModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "imageComponent",
+            "type": "image",
+            "label": "Escolha uma imagem:",
+            "json-expose": true,
+            "json-property": "imageComponent"
+          },
+          {
+            "field": "textOne",
+            "type": "textarea",
+            "label": "Digite uma descrição:",
+            "json-expose": true,
+            "json-property": "textOne"
+          }
+        ]
+      },
+      {
+        "field": "exempleTwo",
+        "type": "multifield",
+        "label": "Second Multifield",
+        "model-name": "exempleTwoModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "title",
+            "type": "textfield",
+            "label": "Digite o título:",
+            "json-expose": true,
+            "json-property": "title"
+          },
+          {
+            "field": "titleTwo",
+            "type": "textfield",
+            "label": "Digite o subtítulo:",
+            "json-expose": true,
+            "json-property": "titleTwo"
+          }
+        ]
+      }
+    ]
+  }
+}
